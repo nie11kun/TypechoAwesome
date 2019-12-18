@@ -93,7 +93,7 @@
                     </form>
                 </div>
                 <div class="col-12">
-                    <ul id="nav nav-tabs" class="clearfix" role="navigation">
+                    <ul class="nav nav-tabs clearfix" role="navigation">
                         <li class="nav-item active">
                             <a<?php if ($this->is('index')) : ?> class="current" <?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('Article'); ?></a>
                         </li>
