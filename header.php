@@ -53,7 +53,9 @@
                 <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
                 <button type="submit" class="submit"><?php _e('搜索'); ?></button>
             </form>
-            
+
+            <div class="dropdown-divider"></div>
+
             <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)) : ?>
                 <p><?php _e('分类'); ?></p>
                 <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
@@ -64,24 +66,9 @@
             <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)) : ?>
                 <p><?php _e('归档'); ?></p>
                 <ul class="widget-list navbar-nav">
-                    <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')->parse('<li class="nav-item active><a class="nav-link" href="{permalink}">{date}</a></li>'); ?>
+                    <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')->parse('<li class="nav-item"><a class="nav-link" href="{permalink}">{date}</a></li>'); ?>
                 </ul>
             <?php endif; ?>
-
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
         </div>
     </nav>
 
