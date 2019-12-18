@@ -95,12 +95,12 @@
                 <div class="col-12">
                     <ul class="nav nav-tabs clearfix" role="navigation">
                         <li class="nav-item">
-                            <a class="nav-link active"<?php if ($this->is('index')) : ?><?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('Article'); ?></a>
+                            <a class="nav-link"<?php if ($this->is('index')) : ?>class="active<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('Article'); ?></a>
                         </li>
                         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                         <?php while ($pages->next()) : ?>
                             <li class="nav-item">
-                                <a  class="nav-link"<?php if ($this->is('page', $pages->slug)) : ?><?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+                                <a  class="nav-link"<?php if ($this->is('page', $pages->slug)) : ?>class="active<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
                             </li>
                         <?php endwhile; ?>
                     </ul>
