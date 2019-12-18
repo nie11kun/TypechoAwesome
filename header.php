@@ -46,13 +46,6 @@
                         <p class="description"><?php $this->options->description() ?></p>
                     <?php endif; ?>
                 </div>
-                <div class="site-search col-mb-12 col-3">
-                    <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-                        <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
-                        <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
-                        <button type="submit" class="submit"><?php _e('搜索'); ?></button>
-                    </form>
-                </div>
                 <div class="col-mb-12">
                     <nav id="nav-menu" class="clearfix" role="navigation">
                         <a<?php if ($this->is('index')) : ?> class="current" <?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('Article'); ?></a>
@@ -61,6 +54,13 @@
                                 <a<?php if ($this->is('page', $pages->slug)) : ?> class="current" <?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
                                 <?php endwhile; ?>
                     </nav>
+                </div>
+                <div class="site-search col-mb-12 col-3">
+                    <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+                        <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
+                        <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
+                        <button type="submit" class="submit"><?php _e('搜索'); ?></button>
+                    </form>
                 </div>
             </div><!-- end .row -->
         </div>
