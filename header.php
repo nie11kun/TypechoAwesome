@@ -45,14 +45,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
 
-            <form class="form-inline" method="post" action="<?php $this->options->siteUrl(); ?>">
-                <input class="form-control mr-sm-2" type="search" placeholder="<?php _e('输入关键字搜索'); ?>" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><?php _e('搜索'); ?></button>
-            </form>
-
-            <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+            <form class="form-inline" id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                 <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
-                <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
+                <input type="text" id="s" name="s" class="text form-control" placeholder="<?php _e('输入关键字搜索'); ?>" />
                 <button type="submit" class="submit"><?php _e('搜索'); ?></button>
             </form>
 
