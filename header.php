@@ -37,74 +37,75 @@
     <!--[if lt IE 8]
     <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
 <![endif]-->
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light bg-transparent d-block d-md-none">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
 
-    <nav class="navbar navbar-expand-md navbar-light bg-transparent d-block d-md-none">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="form-inline" id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+                    <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
+                    <input type="text" id="s" name="s" class="text form-control" placeholder="<?php _e('输入关键字搜索'); ?>" />
+                    <button type="submit" class="submit"><?php _e('搜索'); ?></button>
+                </form>
 
-            <form class="form-inline" id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-                <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
-                <input type="text" id="s" name="s" class="text form-control" placeholder="<?php _e('输入关键字搜索'); ?>" />
-                <button type="submit" class="submit"><?php _e('搜索'); ?></button>
-            </form>
+                <div class="dropdown-divider"></div>
 
-            <div class="dropdown-divider"></div>
+                <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)) : ?>
+                    <p class="text-info"><?php _e('分类'); ?></p>
+                    <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
+                <?php endif; ?>
 
-            <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)) : ?>
-                <p class="text-info"><?php _e('分类'); ?></p>
-                <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
-            <?php endif; ?>
+                <div class="dropdown-divider"></div>
 
-            <div class="dropdown-divider"></div>
-
-            <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)) : ?>
-                <p class="text-info"><?php _e('归档'); ?></p>
-                <ul class="widget-list navbar-nav">
-                    <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')->parse('<li class="nav-item"><a class="" href="{permalink}">{date}</a></li>'); ?>
-                </ul>
-            <?php endif; ?>
-        </div>
-    </nav>
-
-    <header id="header" class="clearfix">
-        <div class="container">
-            <div class="row">
-                <div class="site-name col-md-9 col-12">
-                    <?php if ($this->options->logoUrl) : ?>
-                        <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-                            <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
-                        </a>
-                    <?php else : ?>
-                        <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-                        <p class="description"><?php $this->options->description() ?></p>
-                    <?php endif; ?>
-                </div>
-                <div class="site-search col-md-3 d-none d-md-block">
-                    <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-                        <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
-                        <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
-                        <button type="submit" class="submit"><?php _e('搜索'); ?></button>
-                    </form>
-                </div>
-                <div class="col-12">
-                    <ul class="nav nav-tabs clearfix" role="navigation">
-                        <li class="nav-item">
-                            <a <?php if ($this->is('index')) : ?>class="nav-link active" <?php else : ?>class="nav-link" <?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('Article'); ?></a>
-                        </li>
-                        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-                        <?php while ($pages->next()) : ?>
-                            <li class="nav-item">
-                                <a <?php if ($this->is('page', $pages->slug)) : ?>class="nav-link active" <?php else : ?>class="nav-link" <?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-                            </li>
-                        <?php endwhile; ?>
+                <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)) : ?>
+                    <p class="text-info"><?php _e('归档'); ?></p>
+                    <ul class="widget-list navbar-nav">
+                        <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')->parse('<li class="nav-item"><a class="" href="{permalink}">{date}</a></li>'); ?>
                     </ul>
-                </div>
-            </div><!-- end .row -->
-        </div>
-    </header><!-- end #header -->
+                <?php endif; ?>
+            </div>
+        </nav>
+
+        <header id="header" class="clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="site-name col-md-9 col-12">
+                        <?php if ($this->options->logoUrl) : ?>
+                            <a id="logo" href="<?php $this->options->siteUrl(); ?>">
+                                <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
+                            </a>
+                        <?php else : ?>
+                            <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
+                            <p class="description"><?php $this->options->description() ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="site-search col-md-3 d-none d-md-block">
+                        <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+                            <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
+                            <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
+                            <button type="submit" class="submit"><?php _e('搜索'); ?></button>
+                        </form>
+                    </div>
+                    <div class="col-12">
+                        <ul class="nav nav-tabs clearfix" role="navigation">
+                            <li class="nav-item">
+                                <a <?php if ($this->is('index')) : ?>class="nav-link active" <?php else : ?>class="nav-link" <?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('Article'); ?></a>
+                            </li>
+                            <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+                            <?php while ($pages->next()) : ?>
+                                <li class="nav-item">
+                                    <a <?php if ($this->is('page', $pages->slug)) : ?>class="nav-link active" <?php else : ?>class="nav-link" <?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+                                </li>
+                            <?php endwhile; ?>
+                        </ul>
+                    </div>
+                </div><!-- end .row -->
+            </div>
+        </header><!-- end #header -->
+    </div>
     <div id="body">
         <div class="container">
             <div class="row">
