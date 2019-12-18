@@ -23,6 +23,9 @@
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css?v=1'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css?v=2'); ?>">
+    <!--
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css?v=2'); ?>">
+    -->
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
