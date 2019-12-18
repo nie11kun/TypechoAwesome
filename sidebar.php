@@ -1,5 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<div class="col-md-3 d-sm-none d-md-block" id="secondary" role="complementary">
+<div class="col-3 d-sm-none d-md-block" id="secondary" role="complementary">
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)) : ?>
         <section class="widget">
             <h4 class="Display 2"><?php _e('最新文章'); ?></h4>
