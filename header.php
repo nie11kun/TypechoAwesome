@@ -8,11 +8,11 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title><?php $this->archiveTitle(array(
-                        'category'  =>  _t('分类 %s 下的文章'),
-                        'search'    =>  _t('包含关键字 %s 的文章'),
-                        'tag'       =>  _t('标签 %s 下的文章'),
-                        'author'    =>  _t('%s 发布的文章')
-                    ), '', ' - '); ?><?php $this->options->title(); ?></title>
+                'category'  =>  _t('分类 %s 下的文章'),
+                'search'    =>  _t('包含关键字 %s 的文章'),
+                'tag'       =>  _t('标签 %s 下的文章'),
+                'author'    =>  _t('%s 发布的文章')
+            ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="https://niekun.net/webcdn/bootstrap-4.4.1-dist/css/bootstrap.min.css">
@@ -23,9 +23,6 @@
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css?v=1'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css?v=2'); ?>">
-    <!--
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css?v=2'); ?>">
-    -->
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
@@ -47,6 +44,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+
+            <form class="form-inline" method="post" action="<?php $this->options->siteUrl(); ?>">
+                <input class="form-control mr-sm-2" type="search" placeholder="<?php _e('输入关键字搜索'); ?>" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><?php _e('搜索'); ?></button>
+            </form>
 
             <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                 <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
@@ -95,12 +97,12 @@
                 <div class="col-12">
                     <ul class="nav nav-tabs clearfix" role="navigation">
                         <li class="nav-item">
-                            <a <?php if ($this->is('index')) : ?>class="nav-link active"<?php else : ?>class="nav-link"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('Article'); ?></a>
+                            <a <?php if ($this->is('index')) : ?>class="nav-link active" <?php else : ?>class="nav-link" <?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('Article'); ?></a>
                         </li>
                         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                         <?php while ($pages->next()) : ?>
                             <li class="nav-item">
-                                <a <?php if ($this->is('page', $pages->slug)) : ?>class="nav-link active"<?php else : ?>class="nav-link"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+                                <a <?php if ($this->is('page', $pages->slug)) : ?>class="nav-link active" <?php else : ?>class="nav-link" <?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
                             </li>
                         <?php endwhile; ?>
                     </ul>
