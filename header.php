@@ -39,8 +39,8 @@
 <![endif]-->
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light bg-transparent d-block d-md-none">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler align-self-end" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>">Marco Nie</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -72,13 +72,13 @@
         <header id="header" class="clearfix">
             <div class="container">
                 <div class="row">
-                    <div class="site-name col-md-9 col-12">
+                    <div class="site-name col-md-9 col-12 d-none d-md-block">
                         <?php if ($this->options->logoUrl) : ?>
                             <a id="logo" href="<?php $this->options->siteUrl(); ?>">
                                 <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
                             </a>
                         <?php else : ?>
-                            <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
+                            <a id="logo" class="navbar-brand" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
                             <p class="description"><?php $this->options->description() ?></p>
                         <?php endif; ?>
                     </div>
