@@ -93,7 +93,7 @@
                     </form>
                 </div>
                 <div class="col-12">
-                    <nav id="nav nav-tabs" class="clearfix" role="navigation">
+                    <ul id="nav nav-tabs" class="clearfix" role="navigation">
                         <li class="nav-item active">
                             <a<?php if ($this->is('index')) : ?> class="current" <?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('Article'); ?></a>
                         </li>
@@ -103,7 +103,7 @@
                                 <a<?php if ($this->is('page', $pages->slug)) : ?> class="current" <?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
                             </li>
                         <?php endwhile; ?>
-                    </nav>
+                    </ul>
                 </div>
             </div><!-- end .row -->
         </div>
