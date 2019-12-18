@@ -46,7 +46,7 @@
                         <p class="description"><?php $this->options->description() ?></p>
                     <?php endif; ?>
                 </div>
-                <div class="site-search col-3 kit-hidden-tb">
+                <div class="site-search col-3">
                     <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                         <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
                         <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
