@@ -56,9 +56,7 @@
 
                 <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)) : ?>
                     <p class="text-info"><?php _e('分类'); ?></p>
-                    <ul class="navbar-nav mr-auto">
-                        <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
-                    </ul>
+                    <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
                 <?php endif; ?>
 
                 <div class="dropdown-divider"></div>
