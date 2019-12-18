@@ -15,6 +15,12 @@
                     ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
     <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://niekun.net/webcdn/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+
+    <script src="https://niekun.net/webcdn/jquery-3.4.1/jquery.min.js"></script>
+    <script src="https://niekun.net/webcdn//popper.js-1.16.0/popper.min.js"></script>
+    <script src="https://niekun.net/webcdn/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css?v=1'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css?v=1'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css?v=1'); ?>">
