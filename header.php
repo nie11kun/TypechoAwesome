@@ -22,7 +22,6 @@
     <script src="https://niekun.net/webcdn/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css?v=1'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css?v=1'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css?v=1'); ?>">
 
     <!--[if lt IE 9]>
