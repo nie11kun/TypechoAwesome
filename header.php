@@ -43,7 +43,8 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <form class="form-inline" id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                     <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
@@ -55,14 +56,16 @@
 
                 <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)) : ?>
                     <p class="text-info"><?php _e('分类'); ?></p>
-                    <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
+                    <ul class="navbar-nav mr-auto">
+                        <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
+                    </ul>
                 <?php endif; ?>
 
                 <div class="dropdown-divider"></div>
 
                 <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)) : ?>
                     <p class="text-info"><?php _e('归档'); ?></p>
-                    <ul class="widget-list navbar-nav">
+                    <ul class="navbar-nav mr-auto">
                         <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')->parse('<li class="nav-item"><a class="" href="{permalink}">{date}</a></li>'); ?>
                     </ul>
                 <?php endif; ?>
