@@ -21,6 +21,8 @@
     <script src="https://niekun.net/webcdn//popper.js-1.16.0/popper.min.js"></script>
     <script src="https://niekun.net/webcdn/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
 
+    <script src="<?php $this->options->themeUrl('navItem.js?v=1'); ?>"></script>
+
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css?v=2'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css?v=4'); ?>">
 
@@ -56,8 +58,9 @@
 
                 <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)) : ?>
                     <p class="text-info nav-title"><?php _e('分类'); ?></p>
-                    <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list navbar-nav mr-auto nav-title'); ?>
+                    <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list nav-item-style'); ?>
                 <?php endif; ?>
+                navItemSytle()
 
                 <div class="dropdown-divider"></div>
 
