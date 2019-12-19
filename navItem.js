@@ -1,11 +1,3 @@
-function navItemSytle() {
-
-    var nav = document.getElementsByClassName('nav-item-style');
-    if (nav) {
-        ulAddClass(nav);
-    }
-}
-
 function ulAddClass(a) {
     for (var i = 0; i < a.length; i++) {
         a[i].classlist.add('navbar-nav', 'mr-auto');
@@ -35,5 +27,13 @@ function liAddClass(a) {
 function aAddClass(a) {
     for (var i = 0; i < a.length; i++) {
         a[i].classlist.add('nav-link', 'nav-title'); 
+    }
+}
+
+function navItemSytle() {
+
+    var nav = document.getElementsByClassName('nav-item-style');
+    if (nav) {
+        ulAddClass(nav);
     }
 }
