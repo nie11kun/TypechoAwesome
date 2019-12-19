@@ -7,25 +7,33 @@ function navItemSytle() {
 }
 
 function ulAddClass(a) {
-    a.classlist.add('navbar-nav', 'mr-auto');
-    var listInNav = a.getElementsByClassName('li');
-    if (listInNav) {
-        liAddClass(listInNav);
+    for (var i = 0; i < a.length; i++) {
+        a[i].classlist.add('navbar-nav', 'mr-auto');
+        var listInNav = a[i].getElementsByClassName('li');
+        if (listInNav) {
+            liAddClass(listInNav);
+        }
     }
 }
 
 function liAddClass(a) {
-    a.classlist.add('nav-item');
-    var aInNav = a.getElementsByClassName('a');
-    if (aInNav) {
-        aAddClass(aInNav);
+    for (var i = 0; i < a.length; i++) {
+        a[i].classlist.add('nav-item');
+        var aInNav = a[i].getElementsByClassName('a');
+        if (aInNav) {
+            aAddClass(aInNav);
+        }
+        var ulInList = a[i].getElementsByClassName('ul');
+        if (ulInList) {
+            ulAddClass(ulInList);
+        }
+
     }
-    var ulInList = a.getElementsByClassName('ul');
-    if (ulInList) {
-        ulAddClass(ulInList);
-    }
+
 }
 
 function aAddClass(a) {
-    a.classlist.add('nav-link', 'nav-title');
+    for (var i = 0; i < a.length; i++) {
+        a[i].classlist.add('nav-link', 'nav-title'); 
+    }
 }
