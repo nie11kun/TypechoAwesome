@@ -5,7 +5,7 @@
  * 
  * @package Typecho awesome
  * @author Marco Nie
- * @version 0.0.1 alpha
+ * @version 1.0.1
  * @link https://niekun.net
  */
 
