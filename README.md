@@ -12,10 +12,11 @@ typecho 是一款轻量的博客系统，风格很简洁，相比较 wordpress �
 
 ## 下载主题
 
-GitHub 主页：https://github.com/nie11kun/TypechoAwesome
-release 页面：https://github.com/nie11kun/TypechoAwesome/releases
+此主题是基于 typecho 最新 GitHub master 分支制作的，不保证向下兼容，请升级到最新源码后在使用此主题，升级教程参考：https://niekun.net/index.php/archives/21.html
 
-此主题是基于 typecho 最新 GitHub master 分支制作的，不保证向下兼容，请升级到最新源码后在使用此主题。
+GitHub 主页：https://github.com/nie11kun/TypechoAwesome
+
+release 页面：https://github.com/nie11kun/TypechoAwesome/releases
 
 首先从 release 页面下载最新版本的源码到 typecho themes 目录：
 
