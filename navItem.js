@@ -33,7 +33,7 @@ function aAddClass(a) {
 function navItemSytle() {
 
     var nav = document.getElementsByClassName('nav-item-style');
-    if (nav) {
+    if (!(isNaN(nav))) {
         ulAddClass(nav);
     }
 }
