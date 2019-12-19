@@ -8,11 +8,11 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title><?php $this->archiveTitle(array(
-                        'category'  =>  _t('分类 %s 下的文章'),
-                        'search'    =>  _t('包含关键字 %s 的文章'),
-                        'tag'       =>  _t('标签 %s 下的文章'),
-                        'author'    =>  _t('%s 发布的文章')
-                    ), '', ' - '); ?><?php $this->options->title(); ?></title>
+                'category'  =>  _t('分类 %s 下的文章'),
+                'search'    =>  _t('包含关键字 %s 的文章'),
+                'tag'       =>  _t('标签 %s 下的文章'),
+                'author'    =>  _t('%s 发布的文章')
+            ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="https://niekun.net/webcdn/bootstrap-4.4.1-dist/css/bootstrap.min.css">
@@ -46,6 +46,12 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+                <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+                    <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
+                    <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
+                    <button type="submit" class="submit my-auto"><?php _e('搜索'); ?></button>
+                </form>
+                
                 <form class="form-inline" id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                     <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
                     <input type="text" id="s" name="s" class="text form-control" placeholder="<?php _e('输入关键字搜索'); ?>" />
@@ -89,7 +95,7 @@
                     <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                         <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
                         <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
-                        <button type="submit" class="submit"><?php _e('搜索'); ?></button>
+                        <button type="submit" class="submit my-auto"><?php _e('搜索'); ?></button>
                     </form>
                 </div>
                 <div class="col-12">
