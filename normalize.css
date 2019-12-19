@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+body.container-fluid {
+    padding: 0;
+}
+
 h1 {
     font-size: 2em;
     margin: .67em 0;
