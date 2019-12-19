@@ -21,7 +21,7 @@
     <script src="https://niekun.net/webcdn//popper.js-1.16.0/popper.min.js"></script>
     <script src="https://niekun.net/webcdn/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
 
-    <script src="<?php $this->options->themeUrl('navItem.js?v=5'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('navItem.js?v=6'); ?>"></script>
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css?v=2'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css?v=4'); ?>">
