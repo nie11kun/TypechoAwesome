@@ -1,25 +1,12 @@
 function ulAddClass(a) {
     for (var i = 0; i < a.length; i++) {
         a[i].classlist.add('navbar-nav', 'mr-auto');
-        var listInNav = a[i].getElementsByClassName('li');
-        if (listInNav) {
-            liAddClass(listInNav);
-        }
     }
 }
 
 function liAddClass(a) {
     for (var i = 0; i < a.length; i++) {
         a[i].classlist.add('nav-item');
-        var aInNav = a[i].getElementsByClassName('a');
-        if (aInNav) {
-            aAddClass(aInNav);
-        }
-        var ulInList = a[i].getElementsByClassName('ul');
-        if (ulInList) {
-            ulAddClass(ulInList);
-        }
-
     }
 
 }
@@ -31,9 +18,14 @@ function aAddClass(a) {
 }
 
 function navItemSytle() {
+    var ulnav = document.getElementsByClassName('nav-item-style');
+    var linav = ulnav.getElementsByClassName('li');
+    var anav = ulnav.getElementsByClassName('a');
+    var ulInnav = ulnav.getElementsByClassName('ul');
 
-    var nav = document.getElementsByClassName('nav-item-style');
-    if (!(isNaN(nav))) {
-        ulAddClass(nav);
-    }
+    ulAddClass(ulnav);
+    ulAddClass(linav);
+    ulAddClass(anav);
+    ulAddClass(ulInnav);
+
 }
