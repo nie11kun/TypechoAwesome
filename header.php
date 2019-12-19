@@ -64,7 +64,7 @@
                 <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)) : ?>
                     <p class="text-info"><?php _e('归档'); ?></p>
                     <ul class="navbar-nav mr-auto">
-                        <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')->parse('<li class="nav-item"><a class="" href="{permalink}">{date}</a></li>'); ?>
+                        <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')->parse('<li class="nav-item"><a class="nav-link" href="{permalink}">{date}</a></li>'); ?>
                     </ul>
                 <?php endif; ?>
             </div>
