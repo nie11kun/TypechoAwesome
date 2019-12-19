@@ -21,7 +21,7 @@ release 页面：https://github.com/nie11kun/TypechoAwesome/releases
 首先从 release 页面下载最新版本的源码到 typecho themes 目录：
 
     wget -O /tmp/TypechoAwesome.tar.gz https://github.com/nie11kun/TypechoAwesome/archive/V1.0.1.tar.gz
-    tar -zxvf /tmp/TypechoAwesome.tar.gz /path/to/typecho/usr/themes/
+    tar -zxvf /tmp/TypechoAwesome.tar.gz -C /path/to/typecho/usr/themes/
 
 进网站后台，选择 控制台 - 外观：
 ![2019-12-19T01:53:10.png][3]
