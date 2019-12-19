@@ -8,11 +8,11 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title><?php $this->archiveTitle(array(
-                'category'  =>  _t('分类 %s 下的文章'),
-                'search'    =>  _t('包含关键字 %s 的文章'),
-                'tag'       =>  _t('标签 %s 下的文章'),
-                'author'    =>  _t('%s 发布的文章')
-            ), '', ' - '); ?><?php $this->options->title(); ?></title>
+                        'category'  =>  _t('分类 %s 下的文章'),
+                        'search'    =>  _t('包含关键字 %s 的文章'),
+                        'tag'       =>  _t('标签 %s 下的文章'),
+                        'author'    =>  _t('%s 发布的文章')
+                    ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="https://niekun.net/webcdn/bootstrap-4.4.1-dist/css/bootstrap.min.css">
@@ -43,7 +43,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <form class="form-inline" id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
@@ -68,7 +68,7 @@
                     </ul>
                 <?php endif; ?>
             </div>
-            
+
         </nav>
 
         <header id="header" class="clearfix">
@@ -80,7 +80,7 @@
                                 <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
                             </a>
                         <?php else : ?>
-                            <a id="logo" class="display-1 text-decoration-none" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
+                            <h1 class="display-1"><a id="logo" class="text-decoration-none" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
                             <p class="description mb-2"><?php $this->options->description() ?></p>
                         <?php endif; ?>
                     </div>
