@@ -60,8 +60,11 @@
                     <p class="text-info nav-title"><?php _e('分类'); ?></p>
                     <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list nav-item-style'); ?>
                 <?php endif; ?>
-                navItemSytle()
 
+                <script type="text/javascript">
+                    navItemSytle();
+                </script>
+                
                 <div class="dropdown-divider"></div>
 
                 <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)) : ?>
