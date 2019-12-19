@@ -80,7 +80,7 @@
                                 <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
                             </a>
                         <?php else : ?>
-                            <h1 class="display-1"><a class="text-decoration-none" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
+                            <h1 class="display-3 text-dark"><a class="text-decoration-none" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
                             <p class="description mb-2"><?php $this->options->description() ?></p>
                         <?php endif; ?>
                     </div>
