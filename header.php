@@ -81,7 +81,7 @@
                             </a>
                         <?php else : ?>
                             <a id="logo" class="display-1 text-decoration-none" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-                            <p class="description"><?php $this->options->description() ?></p>
+                            <p class="description mb-2"><?php $this->options->description() ?></p>
                         <?php endif; ?>
                     </div>
                     <div class="site-search col-md-3 d-none d-md-block">
