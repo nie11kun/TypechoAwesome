@@ -55,14 +55,14 @@
                 <div class="dropdown-divider"></div>
 
                 <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)) : ?>
-                    <p class="text-info"><?php _e('分类'); ?></p>
+                    <p class="text-info nav-title"><?php _e('分类'); ?></p>
                     <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
                 <?php endif; ?>
 
                 <div class="dropdown-divider"></div>
 
                 <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)) : ?>
-                    <p class="text-info"><?php _e('归档'); ?></p>
+                    <p class="text-info nav-title"><?php _e('归档'); ?></p>
                     <ul class="navbar-nav mr-auto">
                         <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')->parse('<li class="nav-item"><a class="nav-link" href="{permalink}">{date}</a></li>'); ?>
                     </ul>
