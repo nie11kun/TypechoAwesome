@@ -15,4 +15,10 @@
 <?php $this->footer(); ?>
 </body>
 
+<script src="https://niekun.net/webcdn/jquery-3.4.1/jquery.min.js"></script>
+<script src="https://niekun.net/webcdn//popper.js-1.16.0/popper.min.js"></script>
+<script src="https://niekun.net/webcdn/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+
+<script src="<?php $this->options->themeUrl('navItem.js'); ?>"></script>
+
 </html>
