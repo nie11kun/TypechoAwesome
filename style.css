@@ -407,10 +407,6 @@ textarea {
     word-wrap: break-word;
 }
 
-.post-content h2,
-.comment-content h2 {
-    font-size: 1.28571em;
-}
 
 .post-content img,
 .comment-content img,
