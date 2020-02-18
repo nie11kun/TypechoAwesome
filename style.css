@@ -64,15 +64,6 @@ table th {
     background: #f3f3f3;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
-}
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -225,6 +216,30 @@ textarea {
 .post-content {
     font-size: 16px;
     line-height: 1.5;
+}
+
+.post-content h1 {
+    font-size: 2em;
+}
+
+.post-content h2 {
+    font-size: 1.8em;
+}
+
+.post-content h3 {
+    font-size: 1.6em;
+}
+
+.post-content h4 {
+    font-size: 1.4em;
+}
+
+.post-content h5 {
+    font-size: 1.2em;
+}
+
+.post-content h6 {
+    font-size: 1em;
 }
 
 .post .tags {
