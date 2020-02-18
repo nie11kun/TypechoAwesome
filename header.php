@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://niekun.net/webcdn/bootstrap-4.4.1-dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css?v=2'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css?v=3'); ?>">
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>

@@ -2,7 +2,7 @@ body {
     background-color: #FFF;
     color: #444;
     font-family: "Droid Serif", Georgia, "Times New Roman", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "WenQuanYi Micro Hei", "Microsoft Yahei", serif;
-    font-size: 87.5%;
+    font-size: 16px;
 }
 
 a {
@@ -218,27 +218,27 @@ textarea {
     line-height: 1.5;
 }
 
-.post-content h1 {
+h1 {
     font-size: 2em;
 }
 
-.post-content h2 {
+h2 {
     font-size: 1.8em;
 }
 
-.post-content h3 {
+h3 {
     font-size: 1.6em;
 }
 
-.post-content h4 {
+h4 {
     font-size: 1.4em;
 }
 
-.post-content h5 {
+h5 {
     font-size: 1.2em;
 }
 
-.post-content h6 {
+h6 {
     font-size: 1em;
 }
 
