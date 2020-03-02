@@ -39,9 +39,9 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+            
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
+                <!--
                 <form class="form-inline" id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                     <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
                     <input type="text" id="s" name="s" class="text form-control" placeholder="<?php _e('输入关键字搜索'); ?>" />
@@ -49,6 +49,7 @@
                 </form>
 
                 <div class="dropdown-divider"></div>
+                -->
 
                 <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)) : ?>
                     <p class="text-info nav-title"><?php _e('分类'); ?></p>
@@ -81,7 +82,7 @@
                         <p class="description mb-2"><?php $this->options->description() ?></p>
                     <?php endif; ?>
                 </div>
-                <div class="site-search col-md-3 d-none d-md-block">
+                <div class="site-search col-md-3 col-12">
                     <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                         <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
                         <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
