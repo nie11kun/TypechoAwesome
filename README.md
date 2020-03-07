@@ -8,11 +8,11 @@ typecho 是一款轻量的博客系统，风格很简洁，相比较 wordpress �
 
 官网：http://typecho.org/
 
-关于 typecho 的安装参考我的教程：https://niekun.net/index.php/archives/6.html
+关于 typecho 的安装参考我的教程：https://blog.niekun.net/index.php/archives/6.html
 
 ## 下载主题
 
-此主题是基于 typecho 最新 GitHub master 分支制作的，不保证向下兼容，请升级到最新源码后在使用此主题，升级教程参考：https://niekun.net/index.php/archives/21.html
+此主题是基于 typecho 最新 GitHub master 分支制作的，不保证向下兼容，请升级到最新源码后在使用此主题，升级教程参考：https://blog.niekun.net/index.php/archives/21.html
 
 GitHub 主页：https://github.com/nie11kun/TypechoAwesome
 
@@ -40,10 +40,10 @@ release 页面：https://github.com/nie11kun/TypechoAwesome/releases
 移动端导航栏内容：
 ![2019-12-19T01:56:13.png][7]
 
-  [1]: https://niekun.net/usr/uploads/2019/12/725033772.jpg
-  [2]: https://niekun.net/usr/uploads/2019/12/2062542184.png
-  [3]: https://niekun.net/usr/uploads/2019/12/2830202577.png
-  [4]: https://niekun.net/usr/uploads/2019/12/1589661904.png
-  [5]: https://niekun.net/usr/uploads/2019/12/3356972157.png
-  [6]: https://niekun.net/usr/uploads/2019/12/3169287597.png
-  [7]: https://niekun.net/usr/uploads/2019/12/37920406.png
+  [1]: https://blog.niekun.net/usr/uploads/2019/12/725033772.jpg
+  [2]: https://blog.niekun.net/usr/uploads/2019/12/2062542184.png
+  [3]: https://blog.niekun.net/usr/uploads/2019/12/2830202577.png
+  [4]: https://blog.niekun.net/usr/uploads/2019/12/1589661904.png
+  [5]: https://blog.niekun.net/usr/uploads/2019/12/3356972157.png
+  [6]: https://blog.niekun.net/usr/uploads/2019/12/3169287597.png
+  [7]: https://blog.niekun.net/usr/uploads/2019/12/37920406.png
